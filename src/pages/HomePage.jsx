@@ -1,17 +1,21 @@
-import CaretakerCard from '../components/CaretakerCard'
-
 export default function HomePage() {
-  const caretakers = [
-    { id: 1, name: "Sita Devi", location: "Noida", price: "₹500/day" },
-    { id: 2, name: "Raj Kumar", location: "Delhi", price: "₹600/day" }
-  ]
-
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-semibold mb-4">Available Caretakers</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {caretakers.map(c => <CaretakerCard key={c.id} caretaker={c} />)}
+    <div
+      className="min-h-screen bg-cover bg-center text-white"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80')",
+      }}
+    >
+      <div className="bg-black/60 min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-5xl font-extrabold mb-4 tracking-wide">MAKE YOUR VACATION COMFORTABLE</h1>
+        <p className="text-lg max-w-2xl mb-6">
+          Discover and book verified rooms, PGs, and caretaker services tailored for students, professionals, tourists, and families.
+        </p>
+        <button className="bg-accent hover:bg-[#a96f45] text-white px-6 py-3 rounded-full text-lg font-semibold transition">
+          Book Now
+        </button>
       </div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,13 @@
-export default function CaretakerCard({ caretaker }) {
+import { FaMapMarkerAlt } from 'react-icons/fa';
+
+export default function CaretakerCard({ name, city, price }) {
   return (
-    <div className="border rounded p-4 shadow hover:shadow-lg">
-      <h3 className="text-xl font-bold">{caretaker.name}</h3>
-      <p className="text-gray-600">{caretaker.location}</p>
-      <p className="text-green-600">{caretaker.price}</p>
-      <button className="mt-2 bg-blue-500 text-white px-4 py-1 rounded">Book Now</button>
+    <div className="bg-card text-white border border-soft shadow-lg rounded-xl p-5 transition-transform hover:scale-[1.02]">
+      <h2 className="text-xl font-semibold">{name}</h2>
+      <p className="text-sm text-[#f1e8e1] flex items-center gap-1">
+        <FaMapMarkerAlt className="text-white" /> {city}
+      </p>
+      <p className="text-lg font-bold mt-2">₹{price}/day</p>
     </div>
-  )
+  );
 }

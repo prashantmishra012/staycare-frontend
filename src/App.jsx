@@ -1,11 +1,12 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import HomePage from './pages/HomePage'
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
-import BookCaretakerPage from './pages/BookCaretakerPage'
-import NotFoundPage from './pages/NotFoundPage'
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import BookCaretakerPage from './pages/BookCaretakerPage';
+import NotFoundPage from './pages/NotFoundPage';
+import HomePage from './pages/HomePage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
